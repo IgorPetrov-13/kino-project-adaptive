@@ -1,0 +1,285 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --headerColor: #4520ab;
+  --text: #ffbc5b;
+  --movieName: #989898;
+  --movieAbout: #515151;
+  --cursorHoverTxt: #fff;
+  --ratingTxt: #000;
+  --nextButtonSvg: #ffbc5b;
+  --mobile_menu_color: #29edff;
+}
+
+body {
+  font-family: "IBM Plex Mono", sans-serif;
+}
+
+/* HEADER */
+
+header {
+  background-color: var(--headerColor);
+  height: 80px;
+  width: 100%;
+}
+
+.header_container {
+  height: 100%;
+  max-width: 1070px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav div {
+  text-transform: uppercase;
+  font-size: 21px;
+  margin-right: 25px;
+  transition: color 0.8s;
+}
+
+nav div:hover {
+  cursor: pointer;
+  color: var(--text);
+}
+
+nav svg:hover {
+  fill: var(--text);
+}
+
+/* MAIN */
+
+main {
+  background-color: black;
+  width: 100%;
+  height: 1184px;
+}
+
+.container {
+  height: 100%;
+  max-width: 1070px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.new_movies_for_user,
+.recommendations_for_user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.new_movies_for_user {
+  margin-bottom: 30px;
+}
+
+.new_movies_for_user_txt,
+.recommendations_for_user_txt {
+  color: var(--text);
+  font-size: 30px;
+  padding-top: 40px;
+}
+
+.new_movies_choose,
+.recommendations_for_user_choose {
+  width: 100%;
+  padding-top: 40px;
+  display: flex;
+}
+
+.new_movies_box,
+.recommendations_movies_box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.new_movie {
+  width: 322px;
+  height: 245px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.new_movie_name,
+.recommendation_movie_name {
+  font-size: 16px;
+  color: var(--movieName);
+  transition: color 0.8s;
+}
+
+.new_movie_about,
+.recommendation_movie_about {
+  font-size: 14px;
+  color: var(--movieAbout);
+  transition: color 0.8s;
+}
+
+.new_movies_next_btn,
+.recommendations_movies_next_btn {
+  margin-left: 10px;
+  border-radius: 15px;
+  transition:
+    color 0.8s,
+    fill 0.8s;
+}
+
+.new_movies_next_btn path,
+.recommendations_movies_next_btn path {
+  fill: var(--nextButtonSvg);
+}
+
+.new_movies_next_svg {
+  width: 35px;
+  height: 182px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.8s,
+    fill 0.8s;
+}
+.recommendations_movies_next_svg {
+  width: 35px;
+  height: 485px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    color 0.8s,
+    fill 0.8s;
+}
+
+.recommendation_movie {
+  width: 322px;
+  height: 548px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.new_movie,
+.recommendation_movie {
+  position: relative;
+}
+
+.rating {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  border-radius: 6px;
+  width: 51px;
+  height: 30px;
+  background-color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rating_txt {
+  color: var(--ratingTxt);
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.new_movie:hover,
+.recommendation_movie:hover,
+.new_movies_next_svg:hover,
+.recommendations_movies_next_svg:hover {
+  cursor: pointer;
+}
+
+.new_movies_next_svg:hover path,
+.recommendations_movies_next_svg:hover path {
+  fill: var(--cursorHoverTxt);
+  transition: fill 0.8s;
+}
+
+.new_movie_name:hover,
+.recommendation_movie_name:hover,
+.new_movie_about:hover,
+.recommendation_movie_about:hover {
+  color: var(--cursorHoverTxt);
+}
+
+.new_movie_img:hover ~ div,
+.recommendation_movie_img:hover ~ div {
+  color: var(--cursorHoverTxt);
+}
+
+path {
+  transition: fill 0.8s;
+}
+
+.mobile_menu {
+  display: none;
+}
+
+/* MEDIA */
+
+@media (max-width: 1090px) and (min-width: 768px) {
+  .header_container {
+    justify-content: space-around;
+  }
+
+  .movie_3 {
+    display: none;
+  }
+
+  .new_movies_box,
+  .recommendations_movies_box {
+    justify-content: space-around;
+  }
+
+  .new_movies_for_user_txt,
+  .recommendations_for_user_txt {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    min-width: 390px;
+  }
+
+  .movie_3,
+  .movie_2,
+  .nav_txt {
+    display: none;
+  }
+  .mobile_menu {
+    display: block;
+    padding-right: 25px;
+    margin-left: 25px;
+  }
+
+  .mobile_menu path {
+    fill: var(--mobile_menu_color);
+  }
+
+  .header_container {
+    justify-content: space-around;
+  }
+
+  .log {
+    flex-grow: 1;
+    padding-left: 25px;
+  }
+
+  .container {
+    padding-left: 30px;
+  }
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <title>Кино</title>
+  </head>
+  <body>
+    <header>
+      <div class="header_container">
+        <div class="log">
+          <img src="./img/icons/logo.png" alt="logo" />
+        </div>
+        <nav>
+          <div class="nav_txt">мое кино</div>
+          <div class="nav_txt">магазин</div>
+          <div class="nav_txt">покупки</div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="1em"
+              height="1em"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill="none"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0-14 0m18 11l-6-6"
+              />
+            </svg>
+          </div>
+        </nav>
+        <div class="user">
+          <img src="./img/icons/user_img.png" alt="user" class="user_img" />
+        </div>
+        <div class="mobile_menu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill="currentColor"
+              d="M3 18v-2h18v2zm0-5v-2h18v2zm0-5V6h18v2z"
+            />
+          </svg>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container">
+        <section class="new_movies_for_user">
+          <div class="new_movies_for_user_txt">Новое в подписке</div>
+          <div class="new_movies_choose">
+            <div class="new_movies_box">
+              <article class="new_movie movie_1">
+                <div class="new_movie_img">
+                  <img
+                    src="./img/movies/nulevoi_patient.png"
+                    alt="nulevoi_patient"
+                    loading="lazy"
+                  />
+                  <div class="rating">
+                    <div class="rating_txt">8.4</div>
+                  </div>
+                </div>
+                <div class="new_movie_name">Нулевой пациент</div>
+                <div class="new_movie_about">2022, драма, детектив</div>
+              </article>
+
+              <article class="new_movie movie_2">
+                <div class="new_movie_img">
+                  <img
+                    src="./img/movies/major.png"
+                    alt="major"
+                    loading="lazy"
+                  />
+                  <div class="rating">
+                    <div class="rating_txt">8.3</div>
+                  </div>
+                </div>
+                <div class="new_movie_name">Мажор</div>
+                <div class="new_movie_about">2014, драма, криминал</div>
+              </article>
+
+              <article class="new_movie movie_3">
+                <div class="new_movie_img">
+                  <img
+                    src="./img/movies/flashback.png"
+                    alt="flashback"
+                    loading="lazy"
+                  />
+                  <div class="rating">
+                    <div class="rating_txt">5.2</div>
+                  </div>
+                </div>
+                <div class="new_movie_name">Флешбэк</div>
+                <div class="new_movie_about">2022, боевик, триллер</div>
+              </article>
+            </div>
+
+            <div class="new_movies_next_btn" aria-label="Следующие фильмы">
+              <div class="new_movies_next_svg">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="40px"
+                  height="48px"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="recommendations_for_user">
+          <div class="recommendations_for_user_txt">Рекомендуем посмотреть</div>
+          <div class="recommendations_for_user_choose">
+            <div class="recommendations_movies_box">
+              <article class="recommendation_movie movie_1">
+                <div class="recommendation_movie_img">
+                  <img
+                    src="./img/movies/vse_vezde_i_srazu.png"
+                    alt="vse_vezde_i_srazu"
+                    loading="lazy"
+                  />
+                  <div class="rating">
+                    <div class="rating_txt">8.7</div>
+                  </div>
+                </div>
+                <div class="recommendation_movie_name">Всё, везде и сразу</div>
+                <div class="recommendation_movie_about">
+                  2021, фантастика, комедия
+                </div>
+              </article>
+
+              <article class="recommendation_movie movie_2">
+                <div class="recommendation_movie_img">
+                  <img
+                    src="./img/movies/trigger.png"
+                    alt="trigger"
+                    loading="lazy"
+                  />
+                  <div class="rating">
+                    <div class="rating_txt">6.3</div>
+                  </div>
+                </div>
+                <div class="recommendation_movie_name">Триггер</div>
+                <div class="recommendation_movie_about">2020, драма</div>
+              </article>
+
+              <article class="recommendation_movie movie_3">
+                <div class="recommendation_movie_img">
+                  <img
+                    src="./img/movies/postuchis_v_mou_dver.png"
+                    alt="postuchis_v_mou_dver"
+                    loading="lazy"
+                  />
+                  <div class="rating">
+                    <div class="rating_txt">6.3</div>
+                  </div>
+                </div>
+                <div class="recommendation_movie_name">
+                  Постучись в мою дверь
+                </div>
+                <div class="recommendation_movie_about">
+                  2020, мелодрама, комедия
+                </div>
+              </article>
+
+              <div
+                class="recommendations_movies_next_btn"
+                aria-label="Следующие фильмы"
+              >
+                <div class="recommendations_movies_next_svg">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="40px"
+                    height="48px"
+                    viewBox="0 0 20 20"
+                  >
+                    <path
+                      fill="currentColor"
+                      d="M7 1L5.6 2.5L13 10l-7.4 7.5L7 19l9-9z"
+                    />
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>
